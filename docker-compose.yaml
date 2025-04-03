@@ -1,20 +1,21 @@
-version: '3.8'
+version: '3.9'
 services:
-  python:
-    image: hanvitha/myapp
+  movies:
+    image: hanvitha/myapp:v1
     ports:
       - "81:80"
     deploy:
       replicas: 3
-  recharge: 
-    image: hanvitha/recharge
+  dth:
+    image: hanvitha/recharge:v2
     ports:
-       - "82:80"
+      - "82:80"
     deploy:
       replicas: 3
-  movies:
-    image: hanvitha/movies
+  recharge:
+    image: hanvitha/movies:v3
     ports:
       - "83:80"
     deploy:
       replicas: 3
+    
